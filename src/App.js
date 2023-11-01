@@ -36,9 +36,19 @@ export default function App() {
   };
 
   function handleSubmit() {
-    alert(
-      `Product Name: ${inputName}\nProduct Description: ${inputDesc}\nProduct Category: ${inputCategory}\nProduct Quantity: ${inputQuantity}\nProduct Price: ${inputPrice}`
-    );
+    if (
+      inputName &&
+      inputDesc &&
+      inputCategory &&
+      inputQuantity &&
+      inputPrice
+    ) {
+      alert(
+        `Product Name: ${inputName}\nProduct Description: ${inputDesc}\nProduct Category: ${inputCategory}\nProduct Quantity: ${inputQuantity}\nProduct Price: ${inputPrice}`
+      );
+    } else {
+      alert("Data missing! All fields are mandatory.");
+    }
   }
 
   function handleCancel() {
